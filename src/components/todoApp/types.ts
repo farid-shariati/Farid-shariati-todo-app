@@ -1,7 +1,7 @@
 import { TTodo } from '../../redux/types'
 
 export type TOutput = {
-  todoList: TTodo[] | [] | undefined
+  todoList: TTodo[] | []
   formik: any
   handleDeleteTodo: (id: number) => void
   handleChangeDoneStatus: (id: number) => void
