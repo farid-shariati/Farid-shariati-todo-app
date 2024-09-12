@@ -14,13 +14,11 @@ const TodoApp = () => {
     <TodoStackStyled>
       <LibraryAddCheckIcon fontSize='large' sx={{ mt: 2, mb: 2 }} />
       <TodoForm formik={formik} />
+      <TodoCategories {...{ handleChangeTodoType, todoType }} />
       {todoList?.length > 0 ? (
-        <>
-          <TodoCategories {...{ handleChangeTodoType, todoType }} />
-          <TodoListBox todoItems={todoList as TTodo[]} />
-        </>
+        <TodoListBox todoItems={todoList as TTodo[]} />
       ) : (
-        <Typography sx={{ mt: 2 }}>Come on! Add a task ;)</Typography>
+        <Typography sx={{ mt: 2 }}>There is no task here :(</Typography>
       )}
     </TodoStackStyled>
   )
