@@ -1,7 +1,7 @@
-import Button from '@mui/material/Button'
 import CustomTextField from '../../../../common/components/CustomTextField'
+import { AddTodoButtonStyled } from '../../../styles'
 
-const TodoForm = ({ formik }) => {
+const TodoForm = ({ formik }: { formik: any }) => {
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
@@ -26,9 +26,9 @@ const TodoForm = ({ formik }) => {
           helperText={formik.touched.description && formik.errors.description}
           sx={{ mt: 2, mb: 2 }}
         />
-        <Button variant='contained' type='submit'>
-          submit
-        </Button>
+        <AddTodoButtonStyled variant='contained' type='submit'>
+          Add Todo
+        </AddTodoButtonStyled>
       </form>
     </div>
   )

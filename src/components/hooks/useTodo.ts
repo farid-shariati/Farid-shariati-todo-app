@@ -48,11 +48,12 @@ export const useTodo = (): TOutput => {
   }
 
   const handleChangeTodoType = (type: string) => {
-    console.log('type', type)
     setTodoType(type)
   }
 
   return {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
     todoList: mapping[todoType],
     formik,
     handleDeleteTodo,

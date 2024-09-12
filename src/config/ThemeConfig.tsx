@@ -14,6 +14,7 @@ export default function ThemeConfig({ children }: PropsWithChildren) {
             color: '#fff',
             ':hover': {
               boxShadow: 'none',
+              background: '#119c36',
             },
           },
           sizeLarge: {
@@ -25,17 +26,29 @@ export default function ThemeConfig({ children }: PropsWithChildren) {
           },
         },
       },
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            '& .MuiOutlinedInput-root': {
+              '& .MuiInputLabel-root': {
+                color: 'red', // Green color for the label
+              },
+            },
+          },
+        },
+      },
+
       MuiInputBase: {
         styleOverrides: {
           root: {
             fontWeight: 400,
             fontSize: '14px',
-            input: {
-              color: '#92a1b6',
+            '& input': {
+              color: '#2a2a2a',
             },
             fieldset: {
               border: '2px solid',
-              borderColor: 'gray',
+              borderColor: '#92b69d',
             },
           },
         },
@@ -43,19 +56,19 @@ export default function ThemeConfig({ children }: PropsWithChildren) {
     },
     palette: {
       background: {
-        default: '#282727',
+        default: '#d0f0c0',
       },
       mode: 'light',
       primary: {
         main: '#0b7b29',
-        50: '#16d449',
+        50: '#9ce3af',
       },
       secondary: {
-        main: '#92a1b6',
-        50: '#F8FAFC',
-        100: '#F1F5F9',
-        200: '#E2E8F0',
-        300: '#CBD5E1',
+        main: '#2a2a2a',
+        50: '#d7d6d6',
+        100: '#969798',
+        200: '#646464',
+        300: '#565656  ',
       },
       success: {
         main: '#1be264',

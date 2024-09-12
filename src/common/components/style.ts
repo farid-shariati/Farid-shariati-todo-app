@@ -1,4 +1,4 @@
-import { Dialog, styled } from '@mui/material'
+import { Dialog, Select, styled } from '@mui/material'
 
 export const CustomDialogStyled = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -7,4 +7,8 @@ export const CustomDialogStyled = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogActions-root': {
     padding: theme.spacing(1),
   },
+}))
+
+export const SelectStyled = styled(Select)(() => ({
+  height: '40px',
 }))

@@ -1,10 +1,4 @@
-import {
-  TextField,
-  useTheme,
-  TextFieldProps,
-  SxProps,
-  inputClasses,
-} from '@mui/material'
+import { TextField, useTheme, TextFieldProps, SxProps } from '@mui/material'
 import { ReactNode } from 'react'
 
 type TCustomTextField = TextFieldProps & {
@@ -45,17 +39,6 @@ export const CustomTextField = (props: TCustomTextField): JSX.Element => {
       sx={{
         ...sx,
         width: '100%',
-        '& .MuiInputBase-root.Mui-disabled fieldset': {
-          borderColor: 'secondary.200',
-        },
-        [`& .${inputClasses.root}::before`]: {
-          borderColor: 'secondary.200',
-        },
-        '&:hover': {
-          [`& .${inputClasses.root}::before`]: {
-            borderWidth: '1px !important',
-          },
-        },
       }}
       multiline={multiline}
       {...rest}
